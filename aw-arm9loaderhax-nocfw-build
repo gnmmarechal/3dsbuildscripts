@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+#Git Repository
+gitrepo="https://github.com/AuroraWright/arm9loaderhax"
+gitdir="tmp"
+
+
+#Pre clean up
+rm -rf out
+rm -rf "$gitdir"
+
+#Instructions
+git clone --recursive "$gitrepo" --branch nocfw  --single-branch "$gitdir"
+cd "$gitdir"
+make
+cd ..
+mv "$gitdir"/out out
+
+#Post clean up
+rm -rf "$gitdir"

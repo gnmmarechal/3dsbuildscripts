@@ -1,0 +1,37 @@
+#!/bin/bash
+
+#Install required programs/files prior to building anything. Does not install devkitPro.
+
+#Targeted at distros that support apt
+
+sudo apt-get install gcc g++ make automake libtool git curl wget autoconf perl
+
+#Install makerom and update ctrulib
+./makerom-update
+./ctrulib-update
+
+#Install armips
+#Git Repository
+gitrepo="https://github.com/gnmmarechal/armipshost"
+gitdir="tmp"
+
+
+#Pre clean up
+rm -rf out
+rm -rf "$gitdir"
+
+#Instructions
+git clone --recursive "$gitrepo" "$gitdir"
+if [ "$(uname -m)" == "x86_64" ]
+	then
+		echo "AMD64/x86_64 system detected. Installing x86_64 ARMIPS..."
+		cp $gitdir/armips_backup /bin/armips
+
+	else
+		echo "AMD64/x86_64 system not detected. Installing x86 ARMIPS..."
+		cp $gitdir/x86/armips_x86 /bin/armips
+fi
+
+sudo chmod +x /bin/armips
+sudo rm -rf "$gitdir"
+

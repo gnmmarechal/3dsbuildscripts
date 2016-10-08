@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#Additional Requirements for Build
+#
+# * libtool
+# * automake
+#
+#
+#Git Repository
+gitrepo="https://github.com/chaoskagami/corbenik"
+gitdir="tmp"
+
+
+#Pre clean up
+rm -rf out
+rm -rf "$gitdir"
+
+#Instructions
+git clone --recursive "$gitrepo" "$gitdir"
+cd "$gitdir"
+./autogen.sh
+./configure --host=arm-none-eabi
+make
+cd ..
+mv "$gitdir"/out out
+
+#Post clean up
+rm -rf "$gitdir"

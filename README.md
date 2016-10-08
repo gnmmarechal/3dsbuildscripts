@@ -1,2 +1,32 @@
-# 3dsbuildscripts
-Automatic build scripts for various 3DS-releated stuff
+3DS Build Scripts Project
+
+
+==========================
+Author: gnmmarechal
+Version: 1.0
+==========================
+
+Changelog
+==========================
+
+*v1.0 - Initial Release
+
+==========================
+
+Below, you will find a list of the included buildscripts/installscripts.
+==========================
+*Corbenik CFW : corbenik-build
+*Luma3DS CFW : luma3ds-build
+*AuroraWright's Arm9LoaderHax : aw-arm9loaderhax-build
+*AuroraWright's Arm9LoaderHax (nocfw branch) : aw-arm9loaderhax-nocfw-build
+*Makerom : makerom-update
+*Ctrtool : ctrtool-update
+*Ctrulib : ctrulib-update
+*ShadowNAND : shadownand-build
+*LimaCFW : limacfw-build
+*Lima3DS : lima3ds-build
+*Puma33DS CFW : puma33ds-build
+*Decrypt9WIP : decrypt9wip-build
+*Decrypt9UI : decrypt9ui-build
+*Hourglass9 : hourglass9-build
+*Dependencies : depinstall   --> Installs required packages, builds makerom and ctrulib and installs them, downloads ARMIPS and installs it. Doesn't install devkitPro.

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+#Git Repository
+gitrepo="https://github.com/smealum/ctrulib"
+gitdir="tmp"
+
+
+#Pre clean up
+rm -rf "$gitdir"
+
+#Instructions
+git clone --recursive "$gitrepo" "$gitdir"
+cd "$gitdir"/libctru
+make install
+cd ../..
+
+#Post clean up
+rm -rf "$gitdir"
