@@ -14,6 +14,7 @@ sudo apt-get install gcc g++ make automake libtool git curl wget autoconf perl
 #Git Repository
 gitrepo="https://github.com/gnmmarechal/armipshost"
 gitdir="tmp"
+sgitrepo="https://github.com/gnmmarechal/bin2chost"
 
 
 #Pre clean up
@@ -35,3 +36,11 @@ fi
 sudo chmod +x /bin/armips
 sudo rm -rf "$gitdir"
 
+#bin2c
+git clone --recursive "$gitrepo" "$gitdir"
+cd "$gitdir"
+gcc bin2c.c -o bin2c
+sudo chmod +x bin2c
+cp bin2c /bin/bin2c
+cd ..
+sudo rm -rf "$gitdir"

@@ -44,4 +44,6 @@ Below, you will find a list of the included buildscripts/installscripts.
 
 *Hourglass9 : hourglass9-build
 
-*Dependencies : depinstall   --> Installs required packages, builds makerom and ctrulib and installs them, downloads ARMIPS and installs it. Doesn't install devkitPro.
+*Dependencies : depinstall   --> Installs required packages, builds bin2c, makerom and ctrulib and installs them, downloads ARMIPS and installs it. Doesn't install devkitPro.
+
+*3DS Build Scripts : update (Updates all scripts to the latest git versions) | install-buildscript.sh (Downloads all scripts for the first time with git)
