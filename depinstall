@@ -37,6 +37,7 @@ sudo chmod +x /bin/armips
 sudo rm -rf "$gitdir"
 
 #bin2c
+echo "Installing bin2c..."
 git clone --recursive "$sgitrepo" "$gitdir"
 cd "$gitdir"
 gcc bin2c.c -o bin2c
