@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#Pull the latest scripts from repo
+git pull
