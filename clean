@@ -2,3 +2,4 @@
 
 #Clean
 rm -rf out
+rm -rf out-all

@@ -15,6 +15,7 @@ Changelog
 
 Below, you will find a list of the included buildscripts/installscripts.
 ==========================
+To build all, use: all-build
 
 *Corbenik CFW : corbenik-build
 
@@ -22,13 +23,11 @@ Below, you will find a list of the included buildscripts/installscripts.
 
 *AuroraWright's Arm9LoaderHax : aw-arm9loaderhax-build
 
-*AuroraWright's Arm9LoaderHax (nocfw branch) : aw-arm9loaderhax-nocfw-build
+*Makerom : makerom-update (Builds and installs) | makerom-build (Builds)
 
-*Makerom : makerom-update
+*Ctrtool : ctrtool-update (Builds and installs) | ctrtool-build (Builds)
 
-*Ctrtool : ctrtool-update
-
-*Ctrulib : ctrulib-update
+*Ctrulib : ctrulib-update (Builds and installs) | ctrulib-build (Builds)
 
 *ShadowNAND : shadownand-build
 

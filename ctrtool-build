@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+#Git Repository
+gitrepo="https://github.com/profi200/Project_CTR"
+gitdir="tmp"
+
+
+#Pre clean up
+rm -rf out
+rm -rf "$gitdir"
+
+#Instructions
+git clone --recursive "$gitrepo" "$gitdir"
+cd "$gitdir"/ctrtool
+make
+cd ../..
+mkdir out
+mv "$gitdir"/ctrtool/ctrtool out/ctrtool
+
+#Post clean up
+rm -rf "$gitdir"

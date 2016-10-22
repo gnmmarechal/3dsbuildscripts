@@ -1,0 +1,35 @@
+#!/bin/bash
+
+#Builds every target
+./clean
+mkdir out-all
+./aw-arm9loaderhax-build
+mv out out-all/aw-arm9loaderhax
+./corbenik-build
+mv out out-all/corbenik
+./ctrtool-build
+mv out out-all/ctrtool
+./ctrulib-build
+mv out out-all/ctrulib
+./decrypt9ui-build
+mv out out-all/decrypt9ui
+./decrypt9wip-build
+mv out out-all/decrypt9wip
+./emunand9-build
+mv out out-all/emunand9
+./hourglass9-build
+mv out out-all/hourglass9
+./lima3ds-build
+mv out out-all/lima3ds
+./limacfw-build
+mv out out-all/limacfw
+./luma3ds-build
+mv out out-all/luma3ds
+./makerom-build
+mv out out-all/makerom
+./puma33ds-build
+mv out out-all/puma33ds
+./shadownand-build
+mv out out-all/shadownand
+
+mv out-all out
