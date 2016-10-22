@@ -31,5 +31,8 @@ mv out out-all/makerom
 mv out out-all/puma33ds
 ./shadownand-build
 mv out out-all/shadownand
+./launcher9-build
+mv out out-all/launcher9
+
 
 mv out-all out
