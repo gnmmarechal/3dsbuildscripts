@@ -43,6 +43,8 @@ To build all, use: all-build
 
 *Hourglass9 : hourglass9-build
 
+*Launcher9 : launcher9-build
+
 *Dependencies : depinstall   --> Installs required packages, builds bin2c, makerom and ctrulib and installs them, downloads ARMIPS and installs it. Doesn't install devkitPro.
 
 *3DS Build Scripts : update (Updates all scripts to the latest git versions) | install-buildscript.sh (Downloads all scripts for the first time with git)
