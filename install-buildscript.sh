@@ -7,7 +7,7 @@ gitdir="buildscr"
 
 
 #Pre clean up
-rm -rf "$gitdir"
+./clean
 
 #Instructions
 git clone --recursive "$gitrepo" "$gitdir"

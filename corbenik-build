@@ -12,8 +12,7 @@ gitdir="tmp"
 
 
 #Pre clean up
-rm -rf out
-rm -rf "$gitdir"
+./clean
 
 #Instructions
 git clone --recursive "$gitrepo" "$gitdir"
