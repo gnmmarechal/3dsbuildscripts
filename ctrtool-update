@@ -1,20 +1,26 @@
 #!/bin/bash
 
-
+echo "Building and installing CTRTool..."
 #Git Repository
+echo "Setting variables..."
 gitrepo="https://github.com/profi200/Project_CTR"
 gitdir="tmp"
 
-
+echo "Cleaning..."
 #Pre clean up
 ./clean
 
+echo "Cloning repository..."
 #Instructions
 git clone --recursive "$gitrepo" "$gitdir"
 cd "$gitdir"/ctrtool
+echo "Building..."
 make
 cd ../..
+echo "Moving binary to /bin..."
 mv "$gitdir"/ctrtool/ctrtool /bin/ctrtool
 
+echo "Cleaning..."
 #Post clean up
 rm -rf "$gitdir"
+echo "Done!"

@@ -1,27 +1,33 @@
 #!/bin/bash
 
 #Install required programs/files prior to building anything. Does not install devkitPro.
-
+echo "Installing dependencies..."
 #Targeted at distros that support apt
 
+echo "Installing gcc, g++, make, automake, libtool, git, curl, wget, perl and autoconf..."
 sudo apt-get install gcc g++ make automake libtool git curl wget autoconf perl
 
+echo "Installing MakeROM and ctrulib..."
 #Install makerom and update ctrulib
 ./makerom-update
 ./ctrulib-update
 
+"Installing ARMIPS..."
 #Install armips
 #Git Repository
+echo "Setting variables..."
 gitrepo="https://github.com/gnmmarechal/armipshost"
 gitdir="tmp"
 sgitrepo="https://github.com/gnmmarechal/bin2chost"
 
-
+echo "Cleaning..."
 #Pre clean up
 ./clean
 
 #Instructions
+echo "Cloning repository..."
 git clone --recursive "$gitrepo" "$gitdir"
+echo "Moving ARMIPS to /bin..."
 if [ "$(uname -m)" == "x86_64" ]
 	then
 		echo "AMD64/x86_64 system detected. Installing x86_64 ARMIPS..."
@@ -31,16 +37,23 @@ if [ "$(uname -m)" == "x86_64" ]
 		echo "AMD64/x86_64 system not detected. Installing x86 ARMIPS..."
 		cp $gitdir/x86/armips_x86 /bin/armips
 fi
-
+echo "Setting permissions..."
 sudo chmod +x /bin/armips
+echo "Cleaning..."
 sudo rm -rf "$gitdir"
 
 #bin2c
 echo "Installing bin2c..."
+echo "Cloning repository..."
 git clone --recursive "$sgitrepo" "$gitdir"
 cd "$gitdir"
+echo "Building..."
 gcc bin2c.c -o bin2c
+echo "Setting permissions..."
 sudo chmod +x bin2c
+echo "Moving bin2c to /bin..."
 cp bin2c /bin/bin2c
 cd ..
+echo "Cleaning..."
 sudo rm -rf "$gitdir"
+echo "Done!"

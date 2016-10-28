@@ -1,4 +1,6 @@
 #!/bin/bash
 
 #Pull the latest scripts from repo
+echo "Pulling latest repository..."
 git pull
+echo "Done!"

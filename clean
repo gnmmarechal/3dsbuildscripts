@@ -1,8 +1,13 @@
 #!/bin/bash
 
 #Clean
+echo "Running cleaner script..."
+echo "Removing 'tmp' git repository directory..."
 rm -rf tmp
+echo "Removing 'out' output directory..."
 rm -rf out
 if [ ! -f out-all/allnoremove ]; then
+	echo "Removing 'out-all' output directory..."
 	rm -rf out-all
 fi
+echo "Done!"
