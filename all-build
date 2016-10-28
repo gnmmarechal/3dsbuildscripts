@@ -3,14 +3,13 @@
 #Builds every target
 ./clean
 mkdir out-all
+echo "" >> out-all/allnoremove
 ./aw-arm9loaderhax-build
 mv out out-all/aw-arm9loaderhax
 ./corbenik-build
 mv out out-all/corbenik
 ./ctrtool-build
 mv out out-all/ctrtool
-./ctrulib-build
-mv out out-all/ctrulib
 ./decrypt9ui-build
 mv out out-all/decrypt9ui
 ./decrypt9wip-build
@@ -34,5 +33,5 @@ mv out out-all/shadownand
 ./launcher9-build
 mv out out-all/launcher9
 
-
+rm out-all/allnoremove
 mv out-all out

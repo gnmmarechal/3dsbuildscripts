@@ -3,4 +3,6 @@
 #Clean
 rm -rf tmp
 rm -rf out
-rm -rf out-all
+if [ ! -f out-all/allnoremove ]; then
+	rm -rf out-all
+fi
