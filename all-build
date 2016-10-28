@@ -1,37 +1,69 @@
 #!/bin/bash
 
 #Builds every target
+echo "Building all targets..."
+echo "Performing pre-build cleanup..."
 ./clean
+echo "Creating temporary output directory..."
 mkdir out-all
 echo "" >> out-all/allnoremove
+echo "Building aw-arm9loaderhax..."
 ./aw-arm9loaderhax-build
+echo "Moving binaries to temporary output directory..."
 mv out out-all/aw-arm9loaderhax
+echo "Building corbenik..."
 ./corbenik-build
+echo "Moving binaries to temporary output directory..."
 mv out out-all/corbenik
+echo "Building ctrtool..."
 ./ctrtool-build
+echo "Moving binaries to temporary output directory..."
 mv out out-all/ctrtool
+echo "Building decrypt9ui"
 ./decrypt9ui-build
+echo "Moving binaries to temporary output directory..."
 mv out out-all/decrypt9ui
+echo "Building decrypt9wip"
 ./decrypt9wip-build
+echo "Moving binaries to temporary output directory..."
 mv out out-all/decrypt9wip
+echo "Building emunand9"
 ./emunand9-build
+echo "Moving binaries to temporary output directory..."
 mv out out-all/emunand9
+echo "Building hourglass9..."
 ./hourglass9-build
+echo "Moving binaries to temporary output directory..."
 mv out out-all/hourglass9
+echo "Building lima3ds..."
 ./lima3ds-build
+echo "Moving binaries to temporary output directory..."
 mv out out-all/lima3ds
+echo "Building limacfw"
 ./limacfw-build
+echo "Moving binaries to temporary output directory..."
 mv out out-all/limacfw
+echo "Building luma3ds"
 ./luma3ds-build
+echo "Moving binaries to temporary output directory..."
 mv out out-all/luma3ds
+echo "Building makerom..."
 ./makerom-build
+echo "Moving binaries to temporary output directory..."
 mv out out-all/makerom
+echo "Building puma33ds..."
 ./puma33ds-build
+echo "Moving binaries to temporary output directory..."
 mv out out-all/puma33ds
+echo "Building shadownand..."
 ./shadownand-build
+echo "Moving binaries to temporary output directory..."
 mv out out-all/shadownand
+echo "Building launcher9..."
 ./launcher9-build
+echo "Moving binaries to temporary output directory..."
 mv out out-all/launcher9
-
+echo "Removing temporary file and moving to final output directory..."
 rm out-all/allnoremove
 mv out-all out
+echo "Done!"
