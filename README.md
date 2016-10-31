@@ -3,7 +3,7 @@
 
 ==========================
 Author: gnmmarechal
-Version: 1.0
+Version: 1.1
 ==========================
 
 Changelog
@@ -27,7 +27,7 @@ To build all, use: all-build
 
 *Ctrtool : ctrtool-update (Builds and installs) | ctrtool-build (Builds)
 
-*Ctrulib : ctrulib-update (Builds and installs) | ctrulib-build (Builds)
+*Ctrulib : ctrulib-update (Builds and installs)
 
 *ShadowNAND : shadownand-build
 
@@ -44,6 +44,8 @@ To build all, use: all-build
 *Hourglass9 : hourglass9-build
 
 *Launcher9 : launcher9-build
+
+*BootNTR (Astronautlevel's fork) : al-bootntr-build
 
 *Dependencies : depinstall   --> Installs required packages, builds bin2c, makerom and ctrulib and installs them, downloads ARMIPS and installs it. Doesn't install devkitPro.
 

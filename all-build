@@ -63,6 +63,10 @@ echo "Building launcher9..."
 ./launcher9-build
 echo "Moving binaries to temporary output directory..."
 mv out out-all/launcher9
+echo "Building al-bootntr..."
+./al-bootntr-build
+echo "Moving binaries to temporary output directory..."
+mv out out-all/al-bootntr
 echo "Removing temporary file and moving to final output directory..."
 rm out-all/allnoremove
 mv out-all out

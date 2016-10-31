@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo "Building Astronautlevel's BootNTR..."
+#Git Repository
+echo "Setting variables..."
+gitrepo="https://github.com/astronautlevel2/BootNTR.git"
+gitdir="tmp"
+
+echo "Cleaning..."
+#Pre clean up
+./clean
+
+echo "Cloning repository..."
+#Instructions
+git clone --recursive "$gitrepo" "$gitdir"
+cd "$gitdir"
+echo "Building..."
+make
+cd ..
+echo "Moving files to output directory..."
+mv "$gitdir"/output out
+
+#Post clean up
+echo "Cleaning..."
+rm -rf "$gitdir"
+echo "Done!"
