@@ -67,6 +67,10 @@ echo "Building al-bootntr..."
 ./al-bootntr-build
 echo "Moving binaries to temporary output directory..."
 mv out out-all/al-bootntr
+echo "Building reinand-plus"
+./reinand-plus-build
+echo "Moving binaries to temporary output directory..."
+mv out out-all/luma3ds
 echo "Removing temporary file and moving to final output directory..."
 rm out-all/allnoremove
 mv out-all out

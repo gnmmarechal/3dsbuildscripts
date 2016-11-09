@@ -3,7 +3,7 @@
 
 ==========================
 Author: gnmmarechal
-Version: 1.1
+Version: 1.2
 ==========================
 
 Changelog
@@ -46,6 +46,8 @@ To build all, use: all-build
 *Launcher9 : launcher9-build
 
 *BootNTR (Astronautlevel's fork) : al-bootntr-build
+
+*ReiNand Plus (ReiNand+): reinand-plus-build
 
 *Dependencies : depinstall   --> Installs required packages, builds bin2c, makerom and ctrulib and installs them, downloads ARMIPS and installs it. Doesn't install devkitPro.
 
