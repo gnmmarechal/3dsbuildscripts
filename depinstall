@@ -1,12 +1,15 @@
 #!/bin/bash
 
-#Install required programs/files prior to building anything. Does not install devkitPro.
+#Install required programs/files prior to building anything.
 echo "Installing dependencies..."
 #Targeted at distros that support apt
 
 echo "Installing gcc, g++, make, automake, libtool, git, curl, wget, perl and autoconf..."
 sudo apt-get install gcc g++ make automake libtool git curl wget autoconf perl
 
+echo "Installing DevkitARM..."
+./devkitARMupdate.pl /opt/devkitpro
+./depsetvars
 echo "Installing MakeROM and ctrulib..."
 #Install makerom and update ctrulib
 ./makerom-update

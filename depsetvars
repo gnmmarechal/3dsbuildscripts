@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Setting variables..."
+
+echo "export DEVKITPRO=/opt/devkitpro" >> ~/.bashrc
+echo "export DEVKITARM=/opt/devkitpro/devkitARM" >> ~/.bashrc
+echo "export PATH=$PATH:/OPT/devkitpro/devkitARM/bin" >> ~/.bashrc
+source ~/.bashrc
