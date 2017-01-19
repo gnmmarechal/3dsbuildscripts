@@ -19,7 +19,7 @@ make
 cd ../..
 mkdir out
 echo "Moving files to output directory..."
-mv "$gitdir"/output out
+mv "$gitdir"/output/* out
 
 echo "Cleaning..."
 #Post clean up

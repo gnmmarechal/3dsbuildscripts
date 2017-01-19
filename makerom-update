@@ -14,10 +14,11 @@ echo "Cloning repository..."
 #Instructions
 git clone --recursive "$gitrepo" "$gitdir"
 cd "$gitdir"/makerom
-"Building..."
+echo "Building..."
 make
 cd ../..
-"Moving file to /bin ..."
+mkdir out
+echo "Moving file to /bin ..."
 mv "$gitdir"/makerom/makerom /bin/makerom
 
 echo "Cleaning..."

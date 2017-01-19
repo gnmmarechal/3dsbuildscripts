@@ -18,7 +18,7 @@ echo "Building..."
 make
 cd ../..
 echo "Moving binary to /bin..."
-mv "$gitdir"/out/bannertool /bin/bannertool
+mv "$gitdir"/output/linux-x86_64/bannertool /bin/bannertool
 
 echo "Cleaning..."
 #Post clean up

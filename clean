@@ -10,4 +10,6 @@ if [ ! -f out-all/allnoremove ]; then
 	echo "Removing 'out-all' output directory..."
 	rm -rf out-all
 fi
+echo "Removing files..."
+rm *.bz2
 echo "Done!"

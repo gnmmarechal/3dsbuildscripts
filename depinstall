@@ -18,7 +18,7 @@ echo "Installing Makerom, ctrulib, citro3d, bannertool, 3dstool..."
 ./bannertool-update
 ./3dstool-update
 
-"Installing ARMIPS..."
+echo "Installing ARMIPS..."
 #Install armips
 #Git Repository
 echo "Setting variables..."
