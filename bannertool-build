@@ -1,0 +1,27 @@
+#!/bin/bash
+
+echo "Building Bannertool..."
+#Git Repository
+echo "Setting variables..."
+gitrepo="https://github.com/steveice10/bannertool"
+gitdir="tmp"
+
+echo "Cleaning..."
+#Pre clean up
+./clean
+
+echo "Cloning repository..."
+#Instructions
+git clone --recursive "$gitrepo" "$gitdir"
+cd "$gitdir"
+echo "Building..."
+make
+cd ../..
+mkdir out
+echo "Moving files to output directory..."
+mv "$gitdir"/output out
+
+echo "Cleaning..."
+#Post clean up
+rm -rf "$gitdir"
+echo "Done!"

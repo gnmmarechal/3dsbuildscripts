@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo "Building FBI..."
+#Git Repository
+echo "Setting variables..."
+gitrepo="https://github.com/Steveice10/FBI.git"
+gitdir="tmp"
+
+echo "Cleaning..."
+#Pre clean up
+./clean
+
+echo "Cloning repository..."
+#Instructions
+git clone --recursive "$gitrepo" "$gitdir"
+cd "$gitdir"
+echo "Building..."
+make
+cd ..
+echo "Moving files to output directory..."
+mv "$gitdir"/output/* out/*
+
+echo "Cleaning..."
+#Post clean up
+rm -rf "$gitdir"
+echo "Done!"
